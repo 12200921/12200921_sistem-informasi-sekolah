@@ -11,7 +11,7 @@ class Dashboard extends BaseController
 		$Query = new DataModel();
 		$data = [
 			'title' => "Aplikasi Web Gis Codeigniter 4",
-			'appname' => "WEBGIS - CI",
+			'appname' => "Web Informasi Sekolah",
 			'heading' => "Dashboard",
 			'data' => $Query->getSekolah(),
 			'sd' => $Query->countSekolah("SD"),

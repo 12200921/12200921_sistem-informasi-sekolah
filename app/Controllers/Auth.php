@@ -15,7 +15,7 @@ class Auth extends BaseController
     public function index()
     {
         return view('auth/v_login', [
-            'title' => 'Web Gis Sekolah - Login',
+            'title' => 'Web Informasi Sekolah - Login',
             'data' => $this->UserModel->countAllResults(),
         ]);
     }
@@ -48,7 +48,7 @@ class Auth extends BaseController
     public function register()
     {
         return view('auth/v_register', [
-            'title' => 'Web Gis Sekolah - Register',
+            'title' => 'Web Informasi Sekolah - Register',
         ]);
     }
 

@@ -21,7 +21,7 @@ class Form extends BaseController
     {
         $data = [
             'title' => "Data Sekolah",
-            'appname' => "WEBGIS - CI",
+            'appname' => "Web Informasi Sekolah",
             'heading' => "Data Sekolah",
             'data' => $this->DataModel->getSekolah(),
             'sd' => $this->DataModel->countSekolah("SD"),
@@ -37,7 +37,7 @@ class Form extends BaseController
         session();
         $data = [
             'title' => "Create Sekolah",
-            'appname' => "WEBGIS - CI",
+            'appname' => "Web Informasi Sekolah",
             'heading' => "Create Sekolah",
             'validation' => \Config\Services::validation(),
             'sd' => $this->DataModel->countSekolah("SD"),
@@ -144,7 +144,7 @@ class Form extends BaseController
         $Sekolah = $this->DataModel->getSekolah($slug);
         $data = [
             'title' => "Update : " . $Sekolah['nama_sekolah'],
-            'appname' => "WEBGIS - CI",
+            'appname' => "Web Informasi Sekolah",
             'heading' => "Update Sekolah",
             'data' => $Sekolah,
             'validation' => \Config\Services::validation(),
