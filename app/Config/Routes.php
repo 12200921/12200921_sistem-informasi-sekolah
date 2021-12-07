@@ -11,7 +11,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
     require SYSTEMPATH . 'Config/Routes.php';
 }
 
-/*
+/**
  * --------------------------------------------------------------------
  * Router Setup
  * --------------------------------------------------------------------
@@ -23,7 +23,7 @@ $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
 
-/*
+/**
  * --------------------------------------------------------------------
  * Route Definitions
  * --------------------------------------------------------------------
@@ -33,7 +33,28 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-/*
+$routes->group('auth', function ($routes) {
+    $routes->get('/', 'Auth::index');
+    $routes->get('login', 'Auth::index');
+    $routes->post('ceklogin', 'Auth::ceklogin');
+    $routes->get('register', 'Auth::register');
+    $routes->post('prosesregis', 'Auth::prosesregis');
+    $routes->get('logout', 'Auth::logout');
+});
+
+$routes->get('table', 'Home::table');
+$routes->get('dashboard', 'Dashboard::index', ['filter' => 'ceklogin']);
+
+$routes->group('form', ['filter' => 'ceklogin'], function ($routes) {
+    $routes->get('createsekolah', 'Form::createsekolah');
+    $routes->get('datasekolah', 'Form::datasekolah');
+    $routes->get('update/(:segment)', 'Form::update/$1');
+    $routes->get('hapus/(:num)', 'Form::hapus/$1');
+});
+
+$routes->get('/(:segment)', 'Home::detail/$1');
+
+/**
  * --------------------------------------------------------------------
  * Additional Routing
  * --------------------------------------------------------------------
