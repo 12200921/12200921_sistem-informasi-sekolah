@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title><?=$title ?? 'Web Gis Sekolah'?></title>
+  <title><?=$title ?? 'Web Informasi Sekolah'?></title>
 
   <!-- Custom fonts for this template-->
   <link href="<?= base_url('components/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">

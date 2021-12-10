@@ -13,7 +13,7 @@
                         <div class="col-lg">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Web GIS Sekolah</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Web Informasi Sekolah</h1>
                                 </div>
                                 <?php if (session()->getFlashdata('pesan')) {
     echo session()->getFlashdata('pesan');}
@@ -32,7 +32,7 @@
                                 </form>
                                 <hr>
                                 <div class="text-center">
-                                    <?=($data === 0 ? '<a class="small" href="/auth/register">Buat Akun</a>' : '');?>
+                                    <?=($data === 1 ? '<a class="small" href="/auth/register">Buat Akun</a>' : '');?>
                                 </div>
                             </div>
                         </div>

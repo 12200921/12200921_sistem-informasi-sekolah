@@ -10,7 +10,7 @@ class Dashboard extends BaseController
 	{
 		$Query = new DataModel();
 		$data = [
-			'title' => "Aplikasi Web Gis Codeigniter 4",
+			'title' => "Aplikasi Web Informasi Sekolah Codeigniter 4",
 			'appname' => "Web Informasi Sekolah",
 			'heading' => "Dashboard",
 			'data' => $Query->getSekolah(),
