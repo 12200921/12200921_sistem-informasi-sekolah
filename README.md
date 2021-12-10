@@ -19,6 +19,18 @@ Proyek ini adalah sebuah web daftar sekolah yang mana, kita bisa mengetahui loka
 - Akreditasi
 - Dll
 
+## Cara Pemasangan
+
+Pastikan kamu di komputer kamu sudah terpasang
+[Composer](https://getcomposer.org/) dan [Git](https://git-scm.com/)
+
+Download dengan cara
+`git clone https://github.com/12200921/sistem-informasi-sekolah.git` Setelah proses selesai silahkan lakukan update dependencies dengan cara `composer update`
+
+## Konfigurasi
+
+Pastikan kamu sudah menjalankan local server kamu, kemudian ubah file `env` menjadi `.env` dan migrate file database dengan cara `php spark migrate` kemudain jalankan server `php spark serve`
+
 ## Daftar Kelompok
 - Richo Dwi Wardiyanto Romadhon
 - Fitri Indriyani
